@@ -273,7 +273,6 @@ return array(
 		'packages'  => array(
 		    'orm',
             'less',
-            'helper',
             'shared',
 		),
 
