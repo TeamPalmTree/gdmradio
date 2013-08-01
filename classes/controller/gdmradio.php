@@ -1,6 +1,6 @@
 <?php
 
-class Controller_TeamPalmTree extends Controller_Shared
+class Controller_GDMRadio extends Controller_Shared
 {
 
     public function router($method, $params)
@@ -14,9 +14,7 @@ class Controller_TeamPalmTree extends Controller_Shared
         // set up the template for the UI
         if (!$this->is_restful())
         {
-            $this->template->network = View::forge('teampalmtree/network');
-            $this->template->footer = View::forge('teampalmtree/footer');
-            $this->template->navigation = View::forge('teampalmtree/navigation', array(
+            $this->template->navigation = View::forge('gdmradio/navigation', array(
                 'section' => $this->section,
             ));
         }
