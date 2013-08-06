@@ -3,16 +3,8 @@
 Thumbs.db
 desktop.ini
 .DS_Store
-<<<<<<< HEAD
 /logs/*/*/*
 /cache/*/*
 /config/crypt.php
 /config/*/db.php
 /config/*/migrations.php
-=======
-logs/*/*/*
-cache/*/*
-config/crypt.php
-config/*/db.php
-config/*/migrations.php
->>>>>>> ebce41020084522d41e965d9b2c5ceaa06846bf0
