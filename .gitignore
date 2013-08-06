@@ -6,5 +6,6 @@ desktop.ini
 logs/*/*/*
 cache/*/*
 config/crypt.php
+config/db.php
 config/*/db.php
 config/*/migrations.php
