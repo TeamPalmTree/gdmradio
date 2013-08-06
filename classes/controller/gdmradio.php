@@ -1,6 +1,6 @@
 <?php
 
-class Controller_GDMRadio extends Controller_Shared
+class Controller_GDMRadio extends Controller_TPT
 {
 
     public function router($method, $params)
