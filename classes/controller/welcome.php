@@ -35,6 +35,7 @@ class Controller_Welcome extends Controller_GDMRadio
         // set template vars
         $this->template->title = 'Index';
         $this->template->content = $view;
+        $this->template->header->content = View::forge('gdmradio/header');
 	}
 
 	public function action_404()

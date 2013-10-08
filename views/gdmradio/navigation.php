@@ -6,15 +6,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">GDM Radio</a>
             <div id="navigation-collapse" class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="<?php if ($section == 'home') echo 'active'; ?>"><a href="/">HOME</a></li>
                     <li class="<?php if ($section == 'news') echo 'active'; ?>"><a href="/news">NEWS</a></li>
-                    <li class="<?php if ($section == 'schedule') echo 'active'; ?>"><a href="/schedule">SCHEDULE</a></li>
-                    <li class="<?php if ($section == 'music') echo 'active'; ?>"><a href="/msuic">MUSIC</a></li>
-                    <li class="<?php if ($section == 'events') echo 'active'; ?>"><a href="/events">EVENTS</a></li>
-                    <li class="<?php if ($section == 'contact') echo 'active'; ?>"><a href="/contact">CONTACT</a></li>
+                    <li class="<?php if ($section == 'news') echo 'active'; ?>"><a href="/DJs">DJs</a></li>
+                    <li class="<?php if ($section == 'news') echo 'active'; ?>"><a href="http://forum.gdmradio.com">FORUM</a></li>
                 </ul>
             </div>
         </div>

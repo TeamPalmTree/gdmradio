@@ -6,12 +6,7 @@
 // VARIABLES //
 ///////////////
 
-@Spacing: 6px;
-@AccentColor1: #21409A;
-@AccentColor2: #0077b3;
-@BackgroundColor1: #2D2D2D;
-@BackgroundColor2: #5C5C5C;
-@BackgroundColor3: #707070;
+@spacing: 6px;
 
 /////////////////////////
 // BOOTSTRAP OVERRIDES //
@@ -19,8 +14,8 @@
 
 @bodyBackground: @grayDarker;
 @textColor: @white;
-@navbarBackgroundHighlight: #CB2189;
-@navbarBackground: #842889;
+@navbarBackgroundHighlight: #86A253;
+@navbarBackground: #0E58A8;
 @navbarBrandColor: black;
 @navbarLinkColorHover: white;
 @navbarLinkColor: black;
@@ -30,11 +25,20 @@
 // LISTEN //
 ////////////
 
-.gdm_listen {
+.gdm-listen {
   text-align: center;
+  margin-bottom: @spacing * 3;
 }
 
-.gdm_listen a {
+.gdm-listen a {
   width: 160px;
-  .buttonBackground(#842889, #CB2189);
+  .buttonBackground(#86A253, #0E58A8);
+}
+
+.gdm-welcome {
+  color: #808285;
+}
+
+.gdm-header {
+  float: right;
 }
