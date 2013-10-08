@@ -6,6 +6,9 @@ class Controller_GDMRadio extends Controller_TPT
     public function router($method, $params)
     {
 
+        // forward to FPHP router
+        parent::router($method, $params);
+
         ////////////////////
         // TEMPLATE SETUP //
         ////////////////////
@@ -17,10 +20,10 @@ class Controller_GDMRadio extends Controller_TPT
             $this->template->navigation = View::forge('gdmradio/navigation', array(
                 'section' => $this->section,
             ));
-        }
 
-        // forward to FPHP router
-        parent::router($method, $params);
+            $this->template->header->content = View::forge('gdmradio/header');
+            $this->template->footer->content = View::forge('gdmradio/footer');
+        }
 
     }
 

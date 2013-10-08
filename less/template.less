@@ -22,23 +22,96 @@
 @navbarLinkColorActive: white;
 
 ////////////
+// HEADER //
+////////////
+
+// desktop
+.tpt-header-logo {
+  width: 451px;
+}
+
+// tablet
+@media (max-width: 767px) {
+  .tpt-header-logo {
+    width: 227px;
+  }
+}
+
+// phone
+@media (max-width: 480px) {
+  .tpt-header-logo {
+    width: 176px;
+  }
+}
+
+////////////
 // LISTEN //
 ////////////
 
-.gdm-listen {
+.gdmradio-listen {
   text-align: center;
   margin-bottom: @spacing * 3;
 }
 
-.gdm-listen a {
+.gdmradio-listen a {
   width: 160px;
   .buttonBackground(#86A253, #0E58A8);
 }
 
-.gdm-welcome {
-  color: #808285;
+/////////////
+// PLAYING //
+/////////////
+
+.gdmradio-playing {
+  float: right;
+  color: white;
+  margin-right: @spacing;
+  margin-top: @spacing;
+  text-align: right;
 }
 
-.gdm-header {
-  float: right;
+.gdmradio-playing-now {
+  font-weight: bold;
+}
+
+.gdmradio-playing-artist-song {
+}
+
+.gdmradio-playing-listen {
+  margin-top: @spacing;
+}
+
+// tablet
+@media (max-width: 767px) {
+
+  .gdmradio-playing {
+    margin-top: 0px;
+  }
+
+}
+
+// phone
+@media (max-width: 480px) {
+
+  .gdmradio-playing {
+    margin-top: -1 * @spacing / 2;
+    font-size: 10px;
+  }
+
+  .gdmradio-playing-artist-song {
+    margin-top: -1 * @spacing / 2;
+  }
+
+  .gdmradio-playing-listen {
+    margin-top: 0px;
+  }
+
+}
+
+/////////////
+// WELCOME //
+/////////////
+
+.gdmradio-welcome {
+  color: #808285;
 }
