@@ -23,6 +23,8 @@ class Controller_GDMRadio extends Controller_TPT
 
             $this->template->header->content = View::forge('gdmradio/header');
             $this->template->footer->content = View::forge('gdmradio/footer');
+            // set site
+            $this->template->site = 'GDM Radio';
         }
 
     }

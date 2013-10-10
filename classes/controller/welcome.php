@@ -33,7 +33,6 @@ class Controller_Welcome extends Controller_GDMRadio
         // create view
         $view = View::forge('welcome/index');
         // set template vars
-        $this->template->title = 'Index';
         $this->template->content = $view;
 	}
 
