@@ -10,7 +10,7 @@
             <div id="navigation-collapse" class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="<?php if ($section == 'home') echo 'active'; ?>"><a href="/">HOME</a></li>
-                    <li class="<?php if ($section == 'news') echo 'active'; ?>"><a href="/news">NEWS</a></li>
+                    <!--<li class="<?php if ($section == 'news') echo 'active'; ?>"><a href="/news">NEWS</a></li>-->
                     <li class="<?php if ($section == 'DJs') echo 'active'; ?>"><a href="/DJs">DJs</a></li>
                     <li class="<?php if ($section == 'listen') echo 'active'; ?>"><a href="/listen">LISTEN</a></li>
                     <li><a href="http://forum.gdmradio.com">FORUM</a></li>

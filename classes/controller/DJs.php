@@ -13,6 +13,8 @@ class Controller_DJs extends Controller_GDMRadio
 	{
         // create view
         $view = View::forge('DJs/index');
+        // get DJs
+        $view->DJs = Model_DJ::ordered();
         // set template vars
         $this->template->title = 'DJs';
         $this->template->content = $view;

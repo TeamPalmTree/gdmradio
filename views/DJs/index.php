@@ -1,15 +1,17 @@
-<div id="myCarousel" class="carousel slide tpt-carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    </ol>
-    <!-- Carousel items -->
-    <div class="carousel-inner tpt-carousel">
-        <div class="active item">
-            <img src="assets/img/carousel/1.png" alt="">
-            <div class="carousel-caption">
-                <h4>Happy 2013 Atlanta Pride!!!</h4>
-                <p>Gay Dance Music Radio will unite the LGBT community of Atlanta, the Southeast, and eventually the world by broadcasting a unique and superior mix of gay and electronic dance music, while providing a mental catalyst for the appreciation of the distinctive interests of LGBT individuals.</p>
-            </div>
-        </div>
+<?php foreach ($DJs as $DJ): ?>
+<div class="gdmradio-item">
+    <div class="gdmradio-item-DJ-image" style="background-image: url(<?php echo $DJ->image(); ?>);" /></div>
+    <div class="gdmradio-item-title">
+        <?php echo $DJ->name; ?> <a href="mailto:<?php echo $DJ->email; ?>"><?php echo $DJ->email; ?></a>
     </div>
+    <?php foreach ($DJ->DJ_times as $DJ_time): ?>
+        <div class="gdmradio-item-DJ-time">
+            <?php echo $DJ_time->days; ?> : <?php echo $DJ_time->times; ?>
+        </div>
+    <?php endforeach; ?>
+    <div class="gdmradio-item-text">
+        <?php echo $DJ->description; ?>
+    </div>
+    <div class="clear"></div>
 </div>
+<?php endforeach; ?>

@@ -14,6 +14,8 @@
 
 @bodyBackground: @grayDarker;
 @textColor: @white;
+@subTextColor: #6D6E70;
+@backgroundColor2: #5C5C5C;
 @navbarBackgroundHighlight: #86A253;
 @navbarBackground: #0E58A8;
 @navbarBrandColor: black;
@@ -51,6 +53,7 @@
 .gdmradio-listen {
   text-align: center;
   margin-bottom: @spacing * 3;
+  margin-top: @spacing * 3;
 }
 
 .gdmradio-listen a {
@@ -127,4 +130,44 @@
 
 .gdmradio-welcome {
   color: #808285;
+}
+
+/////////////
+// GENERAL //
+/////////////
+
+.gdmradio-item {
+  cursor: default;
+  border-bottom: 1px solid @backgroundColor2;
+  padding-bottom: @spacing;
+  padding-top: @spacing;
+}
+
+.gdmradio-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: @spacing / 2;
+}
+
+.gdmradio-item-text {
+  color: @subTextColor;
+}
+
+////////
+// DJ //
+////////
+
+.gdmradio-item-DJ-image {
+  width: 92px;
+  height: 92px;
+  background-size: cover;
+  border: 2px solid @navbarBackgroundHighlight;
+  float: left;
+  margin-right: @spacing * 2;
+}
+
+.gdmradio-item-DJ-time {
+  color: @navbarBackgroundHighlight;
+  display: inline-block;
+  margin-right: @spacing;
 }
