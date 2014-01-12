@@ -5,7 +5,9 @@ class Controller_Listen extends Controller_GDMRadio
 
     public function before()
     {
-        $this->section = 'listen';
+        // set section
+        $this->section = 'Listen';
+        // run parent
         parent::before();
     }
 

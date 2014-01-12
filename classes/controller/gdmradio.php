@@ -1,30 +1,31 @@
 <?php
 
-class Controller_GDMRadio extends Controller_TPT
+class Controller_GDMRadio extends Controller_Standard
 {
 
-    public function router($method, $params)
+    public function before()
     {
 
-        // forward to FPHP router
-        parent::router($method, $params);
-
-        ////////////////////
-        // TEMPLATE SETUP //
-        ////////////////////
-
-        // if we aren't restful and aren't passing a REST key
-        // set up the template for the UI
-        if (!$this->is_restful())
+        // start with parent
+        parent::before();
+        // gdmradio template setup
+        if (is_object($this->template))
         {
+            // site
+            $this->template->site = 'GDM Radio';
+            // navigation
             $this->template->navigation = View::forge('gdmradio/navigation', array(
                 'section' => $this->section,
             ));
 
-            $this->template->header->content = View::forge('gdmradio/header');
-            $this->template->footer->content = View::forge('gdmradio/footer');
-            // set site
-            $this->template->site = 'GDM Radio';
+            // set login button view
+            $this->template->navigation->promoter_menu = Promoter::menu_view();
+            // set admin menu
+            $this->template->navigation->promoter_menu->admin_menu = View::forge('gdmradio/adminmenu');
+
+            // header & footer
+            $this->template->section->header = View::forge('gdmradio/header');
+            $this->template->section->footer = View::forge('gdmradio/footer');
         }
 
     }

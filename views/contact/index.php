@@ -27,6 +27,14 @@
         Contribute <a href="mailto:contribute@gdmradio.com">contribute@gdmradio.com</a>
     </div>
     <div class="gdmradio-item-text">
-        GDM Radio is looking for all kinds of help, such as investors, DJs, employees, and volunteers. Don't hesitate to contact us!
+        GDM Radio is looking for all kinds of help, such as DJs, employees, and volunteers. Don't hesitate to contact us!
+    </div>
+</div>
+<div class="gdmradio-item">
+    <div class="gdmradio-item-title">
+        Invest <a href="mailto:invest@gdmradio.com">invest@gdmradio.com</a>
+    </div>
+    <div class="gdmradio-item-text">
+        We are actively seeking investors to assist in this evolving platform.
     </div>
 </div>

@@ -1,173 +1,59 @@
-@import "../../vendor/twitter/bootstrap/less/bootstrap.less";
-@import "../../vendor/twitter/bootstrap/less/responsive.less";
-@import "../../packages/shared/less/shared.less";
-
 ///////////////
 // VARIABLES //
 ///////////////
 
-@spacing: 6px;
+@gdmradio-color: white;
+@gdmradio-accent-light: #974FBB;
+@gdmradio-accent-dark: #331941;
+@gdmradio-bg: #131313;
+@gdmradio-bg-darker: #1A1A1A;
+@gdmradio-bg-dark: #363636;
+@gdmradio-bg-light: #707070;
 
-/////////////////////////
-// BOOTSTRAP OVERRIDES //
-/////////////////////////
+//////////////
+// INCLUDES //
+//////////////
 
-@bodyBackground: @grayDarker;
-@textColor: @white;
-@subTextColor: #6D6E70;
-@backgroundColor2: #5C5C5C;
-@navbarBackgroundHighlight: #86A253;
-@navbarBackground: #0E58A8;
-@navbarBrandColor: black;
-@navbarLinkColorHover: white;
-@navbarLinkColor: black;
-@navbarLinkColorActive: white;
+@import "header.less";
+@import "section.less";
+@import "facebook.less";
+@import "post.less";
 
-////////////
-// HEADER //
-////////////
+//////////////
+// STANDARD //
+//////////////
 
-// desktop
-.tpt-header-logo {
-  width: 451px;
+@import "../../packages/shared/less/standard.less";
+
+// buttons
+@standard-button-bg-active: @gdmradio-bg;
+
+///////////////
+// BOOTSTRAP //
+///////////////
+
+// general
+@body-bg: @gdmradio-bg;
+@text-color: @gdmradio-color;
+
+// navbar
+@navbar-default-bg: @gdmradio-accent-light;
+@navbar-default-border: @gdmradio-accent-dark;
+@navbar-default-color: @text-color;
+@navbar-default-link-color: @text-color;
+@navbar-default-link-active-color: @text-color;
+@navbar-default-link-active-bg: @gdmradio-accent-dark;
+
+// buttons
+@btn-default-bg: @gdmradio-accent-light;
+@btn-default-color: @text-color;
+
+// body
+body {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0tMiAxMEwxMCAtMlpNMTAgNkw2IDEwWk0tMiAyTDIgLTIiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSI0LjUiPjwvcGF0aD4KPC9zdmc+"),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGMTkiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMENGIj48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
 }
 
-// tablet
-@media (max-width: 767px) {
-  .tpt-header-logo {
-    width: 227px;
-  }
-}
-
-// phone
-@media (max-width: 480px) {
-  .tpt-header-logo {
-    width: 176px;
-  }
-}
-
-////////////
-// LISTEN //
-////////////
-
-.gdmradio-listen {
-  text-align: center;
-  margin-bottom: @spacing * 3;
-  margin-top: @spacing * 3;
-}
-
-.gdmradio-listen a {
-  width: 160px;
-  .buttonBackground(#86A253, #0E58A8);
-}
-
-/////////////
-// PLAYING //
-/////////////
-
-.gdmradio-playing {
-  color: white;
-  margin-right: @spacing;
-  margin-top: @spacing * 2;
-  text-align: right;
-  position: absolute;
-  right: 0px;
-  z-index: 0;
-}
-
-.gdmradio-playing-now {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: @spacing / 2;
-}
-
-.gdmradio-playing-artist-song {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.gdmradio-playing-listen {
-  margin-top: @spacing;
-}
-
-// tablet
-@media (max-width: 767px) {
-
-  .gdmradio-playing {
-    margin-top: 0px;
-    font-size: 11px;
-  }
-
-}
-
-// phone
-@media (max-width: 480px) {
-
-  .gdmradio-playing-now {
-    font-size: 10px;
-    margin-bottom: 0px;
-  }
-
-  .gdmradio-playing {
-    margin-top: -1 * @spacing / 2;
-    font-size: 10px;
-  }
-
-  .gdmradio-playing-artist-song {
-    margin-top: -1 * @spacing / 2;
-  }
-
-  .gdmradio-playing-listen {
-    margin-top: 0px;
-  }
-
-}
-
-/////////////
-// WELCOME //
-/////////////
-
-.gdmradio-welcome {
-  color: #808285;
-}
-
-/////////////
-// GENERAL //
-/////////////
-
-.gdmradio-item {
-  cursor: default;
-  border-bottom: 1px solid @backgroundColor2;
-  padding-bottom: @spacing;
-  padding-top: @spacing;
-}
-
-.gdmradio-item-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: @spacing / 2;
-}
-
-.gdmradio-item-text {
-  color: @subTextColor;
-}
-
-////////
-// DJ //
-////////
-
-.gdmradio-item-DJ-image {
-  width: 92px;
-  height: 92px;
-  background-size: cover;
-  border: 2px solid @navbarBackgroundHighlight;
-  float: left;
-  margin-right: @spacing * 2;
-}
-
-.gdmradio-item-DJ-time {
-  color: @navbarBackgroundHighlight;
-  display: inline-block;
-  margin-right: @spacing;
+// standard
+.standard {
+  margin-top: @navbar-height;
 }

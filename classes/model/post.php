@@ -7,7 +7,9 @@ class Model_Post extends \Orm\Model
         'id',
         'posted_on',
         'title',
+        'image',
         'text',
+        'user_id',
     );
 
     protected static $_has_many = array(

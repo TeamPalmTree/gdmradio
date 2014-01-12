@@ -5,7 +5,9 @@ class Controller_Contact extends Controller_GDMRadio
 
     public function before()
     {
-        $this->section = 'contact';
+        // set section
+        $this->section = 'Contact';
+        // run parent
         parent::before();
     }
 
