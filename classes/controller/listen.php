@@ -17,7 +17,7 @@ class Controller_Listen extends Controller_GDMRadio
         $view = View::forge('listen/index');
         // set template vars
         $this->template->title = 'Listen';
-        $this->template->content = $view;
+        $this->template->section->body = $view;
 	}
 
 }

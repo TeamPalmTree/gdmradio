@@ -1,40 +1,36 @@
-<div class="gdmradio-item">
-    <div class="gdmradio-item-title">
-        Community Forums <a href="http://forum.gdmradio.com">forum.gdmradio.com</a>
-    </div>
-    <div class="gdmradio-item-text">
-        Connect with our growing community of listeners. Make music suggestions, report station bugs, or discuss anything related to the music we all love.
-    </div>
-</div>
-<div class="gdmradio-item">
-    <div class="gdmradio-item-title">
-        General Inquiries <a href="mailto:info@gdmradio.com">info@gdmradio.com</a>
-    </div>
-    <div class="gdmradio-item-text">
-        Have a general question or personal comment? Hit us up!
-    </div>
-</div>
-<div class="gdmradio-item">
-    <div class="gdmradio-item-title">
-        Advertising <a href="mailto:advertise@gdmradio.com">advertise@gdmradio.com</a>
-    </div>
-    <div class="gdmradio-item-text">
-        Want to hear your ad on GDM Radio? We believe in providing unobtrusive ads that flow with our listening experience for the best listener impressions. Our audio ads are also synchronized with graphical content in our web application for frictionless interaction.
-    </div>
-</div>
-<div class="gdmradio-item">
-    <div class="gdmradio-item-title">
-        Contribute <a href="mailto:contribute@gdmradio.com">contribute@gdmradio.com</a>
-    </div>
-    <div class="gdmradio-item-text">
-        GDM Radio is looking for all kinds of help, such as DJs, employees, and volunteers. Don't hesitate to contact us!
-    </div>
-</div>
-<div class="gdmradio-item">
-    <div class="gdmradio-item-title">
-        Invest <a href="mailto:invest@gdmradio.com">invest@gdmradio.com</a>
-    </div>
-    <div class="gdmradio-item-text">
-        We are actively seeking investors to assist in this evolving platform.
+<div class="container">
+    <div class="gdmradio-section">
+        <div class="gdmradio-section-content">
+            <div class="media">
+                <div class="media-body">
+                    <a class="gdmradio-media-title-link" href="http://forum.gdmradio.com">Community Forums</a>
+                    <div class="gdmradio-media-text">Connect with our growing community of listeners. Make music suggestions, report station bugs, or discuss anything related to the music we all love.</div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <a class="gdmradio-media-title-link" href="mailto:info@gdmradio.com">General Inquiries</a>
+                    <div class="gdmradio-media-text">Have a general question or personal comment? Hit us up!</div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <a class="gdmradio-media-title-link" href="mailto:advertise@gdmradio.com">Advertising</a>
+                    <div class="gdmradio-media-text">Want to hear your ad on GDM Radio? We believe in providing unobtrusive ads that flow with our listening experience for the best listener impressions. Our audio ads are also synchronized with graphical content in our web application for frictionless interaction.</div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <a class="gdmradio-media-title-link" href="mailto:contribute@gdmradio.com">Contribute</a>
+                    <div class="gdmradio-media-text">GDM Radio is looking for all kinds of help, such as DJs, employees, and volunteers. Don't hesitate to contact us!</div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <a class="gdmradio-media-title-link" href="mailto:invest@gdmradio.com">Invest</a>
+                    <div class="gdmradio-media-text">We are actively seeking investors to assist in this evolving platform.</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

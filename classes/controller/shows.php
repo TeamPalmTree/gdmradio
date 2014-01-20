@@ -1,12 +1,12 @@
 <?php
 
-class Controller_DJs extends Controller_GDMRadio
+class Controller_Shows extends Controller_GDMRadio
 {
 
     public function before()
     {
         // set section
-        $this->section = 'DJs';
+        $this->section = 'Shows';
         // run parent
         parent::before();
     }
@@ -14,11 +14,9 @@ class Controller_DJs extends Controller_GDMRadio
 	public function action_index()
 	{
         // create view
-        $view = View::forge('DJs/index');
-        // get DJs
-        $view->DJs = Model_DJ::all();
+        $view = View::forge('shows/index');
         // set template vars
-        $this->template->title = 'DJs';
+        $this->template->title = 'Shows';
         $this->template->section->body = $view;
 	}
 

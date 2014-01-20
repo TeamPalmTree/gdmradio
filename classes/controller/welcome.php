@@ -15,14 +15,76 @@ class Controller_Welcome extends Controller_GDMRadio
 	{
         // create view
         $view = View::forge('welcome/index');
-        // set recent posts
-        $view->posts = Model_Post::recent();
+        // get carousel & posts
+        $carousels = Model_Carousel::all();
+        $posts = Model_Post::viewable_recent();
+        // set carousel & recent posts
+        $view->set('carousels', array_values($carousels), false);
+        $view->set('posts', $posts, false);
         // set template vars
         $this->template->section->body = $view;
 	}
+
+    public function action_edit()
+    {
+        // create view
+        $view = View::forge('welcome/form');
+        // set template vars
+        $this->template->section->body = $view;
+    }
+
+    public function post_edit()
+    {
+
+        // verify access
+        if (!Auth::has_access('gdmradio.welcome[update]'))
+            throw new HttpAccessDeniedException();
+
+        $carousels = array();
+        // get post input
+        $input = Input::json();
+        // if we have an input post, save
+        if (count($input) > 0)
+        {
+            // delete all existing carousels
+            DB::delete('carousels')->execute();
+            // create new carousels
+            foreach ($input as $carousel_input)
+            {
+                $carousel = Model_Carousel::forge();
+                $carousel->populate($carousel_input);
+                $carousel->save();
+                $carousels[] = $carousel;
+            }
+        }
+        else
+        {
+            // get carousels
+            $carousels = array_values(Model_Carousel::all());
+        }
+
+        // success
+        return $this->response($carousels);
+
+    }
 
 	public function action_404()
 	{
 		return Response::forge(ViewModel::forge('welcome/404'), 404);
 	}
+
+    public function post_image()
+    {
+
+        // verify access
+        if (!Auth::has_access('gdmradio.welcome[update]'))
+            throw new HttpAccessDeniedException();
+        // process & save uploads
+        Upload::process();
+        Upload::save();
+        // success
+        return $this->response('SUCCESS');
+
+    }
+
 }

@@ -25,3 +25,37 @@
   top: 10px;
   right: 10px;
 }
+
+@media all and (max-width: @screen-md-min) {
+
+  .gdmradio-header {
+    height: 110px;
+  }
+
+  .gdmradio-header-logo {
+    background-image: url('/assets/img/logo-small.png');
+    height: 100px;
+  }
+
+}
+
+@media all and (max-width: @screen-sm-min) {
+
+  .gdmradio-header {
+    height: 80px;
+  }
+
+  .gdmradio-header .container {
+    width: 100%;
+  }
+
+  .gdmradio-header-logo {
+    background-image: url('/assets/img/logo-tiny.png');
+    height: 70px;
+  }
+
+  .gdmradio-header-icons a:not([title~='Facebook']) {
+    display: none;
+  }
+
+}

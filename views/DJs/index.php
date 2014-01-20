@@ -1,17 +1,17 @@
-<?php foreach ($DJs as $DJ): ?>
-<div class="gdmradio-item">
-    <div class="gdmradio-item-DJ-image" style="background-image: url(<?php echo $DJ->image(); ?>);" /></div>
-    <div class="gdmradio-item-title">
-        <?php echo $DJ->name; ?> <a href="mailto:<?php echo $DJ->email; ?>"><?php echo $DJ->email; ?></a>
-    </div>
-    <?php foreach ($DJ->DJ_times as $DJ_time): ?>
-        <div class="gdmradio-item-DJ-time">
-            <?php echo $DJ_time->days; ?> : <?php echo $DJ_time->times; ?>
+<div class="container">
+    <?php foreach ($DJs as $DJ): ?>
+    <div class="gdmradio-section">
+        <div class="gdmradio-section-content">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img src="<?php echo '/assets/img/DJs/' . $DJ->username . '.png'; ?>" width="128" height="128" />
+                </a>
+                <div class="media-body">
+                    <div class="gdmradio-media-title-big"><?php echo $DJ->shortname; ?></div>
+                    <div class="gdmradio-media-text"><?php echo $DJ->description; ?></div>
+                </div>
+            </div>
         </div>
-    <?php endforeach; ?>
-    <div class="gdmradio-item-text">
-        <?php echo $DJ->description; ?>
     </div>
-    <div class="clear"></div>
+    <?php endforeach; ?>
 </div>
-<?php endforeach; ?>

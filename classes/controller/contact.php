@@ -17,7 +17,7 @@ class Controller_Contact extends Controller_GDMRadio
         $view = View::forge('contact/index');
         // set template vars
         $this->template->title = 'Contact';
-        $this->template->content = $view;
+        $this->template->section->body = $view;
 	}
 
 }

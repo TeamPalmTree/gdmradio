@@ -3,13 +3,13 @@
 class Controller_GDMRadio extends Controller_Standard
 {
 
-    public function before()
+    public function router($method, $params)
     {
 
-        // start with parent
-        parent::before();
+        // forward to router
+        parent::router($method, $params);
         // gdmradio template setup
-        if (is_object($this->template))
+        if (!$this->is_restful())
         {
             // site
             $this->template->site = 'GDM Radio';

@@ -2,76 +2,91 @@
   position: relative;
   background-color: hsla(hue(black), saturation(black), lightness(black), 0.6);
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: @gdmradio-spacing;
 }
 
 .gdmradio-section-content {
   position: relative;
   width: 100%;
-  padding: 10px;
+  padding: @gdmradio-spacing;
 }
 
 .gdmradio-section-facebook {
   position: relative;
   width: 100%;
-  padding-right: 10px;
+  padding-right: @gdmradio-spacing;
 }
 
 .gdmradio-section-twitter {
   position: relative;
   width: 100%;
-  padding: 40px 10px 10px 10px;
+  padding: 0px @gdmradio-spacing 0px @gdmradio-spacing;
 }
 
-.gdmradio-section-title {
+.gdmradio-section-title-inline {
   position: absolute;
   top: 0px;
-  right: 5px;
+  right: @gdmradio-spacing;
   font-size: 30px;
   font-weight: bold;
   color: white;
 }
 
-.gdmradio-split {
+.gdmradio-section-title {
+  position: relative;
+  right: @gdmradio-spacing;
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.gdmradio-section-buttons {
+  position: relative;
+  right: @gdmradio-spacing;
+  text-align: right;
+}
+
+.gdmradio-section-split {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: @gdmradio-spacing;
   position: relative;
   display: flex;
 }
 
-.gdmradio-split-left {
+.gdmradio-section-split-left {
   position: relative;
   flex: 1;
   background-color: hsla(hue(black), saturation(black), lightness(black), 0.6);
-  margin-right: 5px;
+  margin-right: @gdmradio-spacing / 2;
 }
 
-.gdmradio-split-right {
+.gdmradio-section-split-right {
   position: relative;
   flex: 1;
   background-color: hsla(hue(black), saturation(black), lightness(black), 0.6);
-  margin-left: 5px;
+  margin-left: @gdmradio-spacing / 2;
 }
 
 @media all and (max-width: @screen-sm-min) {
 
-  .gdmradio-split {
+  .gdmradio-section-split {
     flex-flow: column;
     flex-direction: column;
   }
 
-  .gdmradio-section-title {
+  .gdmradio-section-title-inline {
     position: relative;
     right: 0px;
-    left: 5px;
+    left: @gdmradio-spacing / 2;
   }
 
-  .gdmradio-split-left {
+  .gdmradio-section-split-left {
     margin-right: 0px;
-    margin-bottom: 10px;
+    margin-bottom: @gdmradio-spacing;
   }
 
-  .gdmradio-split-right {
+  .gdmradio-section-split-right {
     margin-left: 0px;
   }
 

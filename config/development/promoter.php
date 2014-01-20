@@ -2,7 +2,7 @@
 
 return array(
 
-    'authority_url' => 'http://localhost:15001',
-    'base_url' => 'http://localhost:15002',
+    'authority_url' => 'http://authority',
+    'base_url' => 'http://gdmradio',
 
 );
