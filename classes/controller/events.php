@@ -27,8 +27,13 @@ class Controller_Events extends Controller_GDMRadio
         // set up facebook sdk
         $facebook = new Facebook($config);
         $result = $facebook->api('/GDMRadio/events?fields=id,name,description,location,start_time,end_time,picture');
+        $events = $result['data'];
+        // fix up date times
+        foreach ($events as &$event)
+            $event['user_start_time'] = date(Helper::$user_pattern, strtotime($event['start_time']));
+
         // set events
-        $view->events = $result['data'];
+        $view->events = $events;
         // set template vars
         $this->template->title = 'DJs';
         $this->template->section->body = $view;

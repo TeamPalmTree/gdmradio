@@ -10,10 +10,12 @@
                 <div class="carousel-inner">
                     <?php foreach ($carousels as $index => $carousel): ?>
                     <div class="item<?php if ($index == 0) echo ' active'; ?>">
-                        <a href="<?php echo $carousel->website; ?>"><img src="/assets/img/uploads/<?php echo $carousel->image; ?>" alt=""></a>
+                        <a href="<?php echo $carousel->website; ?>" target="_blank">
+                            <img src="/assets/img/uploads/<?php echo $carousel->image; ?>" alt="<?php echo $carousel->title; ?>">
+                        </a>
                         <div class="carousel-caption">
                             <h4><?php echo $carousel->title; ?></h4>
-                            <p><?php echo $carousel->text; ?></p>
+                           <?php echo $carousel->text; ?>
                         </div>
                     </div>
                     <?php endforeach; ?>
