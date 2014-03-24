@@ -1,7 +1,7 @@
 <div class="container">
     <?php foreach ($events as &$event): ?>
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="media">
                 <a class="pull-left" href="https://www.facebook.com/<?php echo $event['id']; ?>">
                     <img src="<?php echo $event['picture']['data']['url']; ?>" width="128" height="128" />

@@ -5,10 +5,10 @@ class Controller_Contact extends Controller_GDMRadio
 
     public function before()
     {
-        // set section
-        $this->section = 'Contact';
         // run parent
         parent::before();
+        // set section
+        $this->section->name = 'Contact';
     }
 
 	public function action_index()

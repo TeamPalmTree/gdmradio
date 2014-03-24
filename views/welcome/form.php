@@ -1,8 +1,8 @@
 <div id="welcome-form" class="container">
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-title">EDIT CAROUSELS</div>
-        <div class="gdmradio-section-content">
-            <div class="gdmradio-section-content" data-bind="foreach: carousels">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-title">EDIT CAROUSELS</div>
+        <div class="gdmradio-block-content">
+            <div class="gdmradio-block-content" data-bind="foreach: carousels">
                 <!-- ko if: image -->
                 <img src="" style="max-width: 100%;" data-bind="attr: { src: '/assets/img/uploads/' + image() }" />
                 <hr />

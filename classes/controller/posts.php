@@ -5,18 +5,19 @@ class Controller_Posts extends Controller_GDMRadio
 
     public function before()
     {
-        // set section
-        $this->section = 'Posts';
         // run parent
         parent::before();
+        // set section
+        $this->section->name = 'Posts';
     }
 
     public function action_index()
     {
+        // return the first page
         return $this->action_page(1);
     }
 
-	public function action_page($page)
+	public function action_page($page = null)
 	{
 
         // load gdmradio condif

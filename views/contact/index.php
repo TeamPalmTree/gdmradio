@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="media">
                 <div class="media-body">
                     <a class="gdmradio-media-title-link" href="http://forum.gdmradio.com">Community Forums</a>

@@ -1,9 +1,9 @@
-<div id="post-form" class="container">
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-title" data-bind="if: post">
+<div id="posts-form" class="container">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-title" data-bind="if: post">
             <span data-bind="text: post().id() ? ('EDIT ' + post().title()) : ('CREATE ' + (post().title() ? post().title() : ''))"></span>
         </div>
-        <div class="gdmradio-section-content">
+        <div class="gdmradio-block-content">
             <div class="form-horizontal" data-bind="with: post">
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="title">Title</label>

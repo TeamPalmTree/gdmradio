@@ -5,10 +5,10 @@ class Controller_Listen extends Controller_GDMRadio
 
     public function before()
     {
-        // set section
-        $this->section = 'Listen';
         // run parent
         parent::before();
+        // set section
+        $this->section->name = 'Listen';
     }
 
 	public function action_index()

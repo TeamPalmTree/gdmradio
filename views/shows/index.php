@@ -1,12 +1,12 @@
 <div id="shows-index" class="container">
     <!-- ko if: single_shows().length > 0 -->
-    <div class="gdmradio-section" data-bind="attr: { id: day() }">
-        <div class="gdmradio-section-title-inline">SPECIAL SHOWS</div>
-        <div class="gdmradio-section-content" data-bind="template: { name: 'show-template', foreach: single_shows }"></div>
+    <div class="gdmradio-block" data-bind="attr: { id: day() }">
+        <div class="gdmradio-block-title-inline">SPECIAL SHOWS</div>
+        <div class="gdmradio-block-content" data-bind="template: { name: 'show-template', foreach: single_shows }"></div>
     </div>
     <!-- /ko -->
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="btn-group" data-bind="foreach: repeat_days">
                 <button type="button" class="btn btn-default" data-bind="text: day().toUpperCase(), click: $root.scroll_to_day"></button>
             </div>
@@ -14,9 +14,9 @@
     </div>
     <!-- ko foreach: repeat_days -->
     <!-- ko if: shows().length > 0 -->
-    <div class="gdmradio-section" data-bind="attr: { id: day() }">
-        <div class="gdmradio-section-title-inline" data-bind="text: day().toUpperCase()"></div>
-        <div class="gdmradio-section-content" data-bind="template: { name: 'show-template', foreach: shows }"></div>
+    <div class="gdmradio-block" data-bind="attr: { id: day() }">
+        <div class="gdmradio-block-title-inline" data-bind="text: day().toUpperCase()"></div>
+        <div class="gdmradio-block-content" data-bind="template: { name: 'show-template', foreach: shows }"></div>
     </div>
     <!-- /ko -->
     <!-- /ko -->

@@ -1,0 +1,67 @@
+.gdmradio-jumbotron {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+}
+
+.gdmradio-jumbotron-left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+}
+
+.gdmradio-jumbotron .carousel {
+  flex: none;
+  margin-bottom: @gdmradio-spacing;
+  margin-right: @gdmradio-spacing;
+}
+
+.gdmradio-jumbotron-news {
+  position: relative;
+  margin-right: @gdmradio-spacing;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+}
+
+.gdmradio-jumbotron-article {
+  position: relative;
+  width: 128px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  margin-right: @gdmradio-spacing;
+}
+
+.gdmradio-jumbotron-right {
+  position: relative;
+  flex: none;
+  width: 200px;
+}
+
+.gdmradio-jumbotron-file {
+  position: relative;
+  border-bottom: 1px solid @gdmradio-bg-light;
+  padding-bottom: @gdmradio-spacing / 2;
+  margin-bottom: @gdmradio-spacing / 2;
+}
+
+@media all and (max-width: @screen-md-min) {
+
+  .gdmradio-jumbotron .carousel {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+
+  .gdmradio-jumbotron-news {
+    display: none;
+  }
+
+  .gdmradio-jumbotron-right {
+    display: none;
+  }
+
+}

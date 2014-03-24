@@ -5,14 +5,15 @@ class Controller_Events extends Controller_GDMRadio
 
     public function before()
     {
-        // set section
-        $this->section = 'Events';
         // run parent
         parent::before();
+        // set section
+        $this->section->name = 'Events';
     }
 
     public function action_index()
     {
+
         // create view
         $view = View::forge('events/index');
         // load opauth configuration
@@ -37,6 +38,7 @@ class Controller_Events extends Controller_GDMRadio
         // set template vars
         $this->template->title = 'DJs';
         $this->template->section->body = $view;
+
     }
 
 }

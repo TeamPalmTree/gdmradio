@@ -1,9 +1,9 @@
 <div class="container">
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="gdmradio-footer">
                 <div class="gdmradio-footer-text">
-                    <span>© <?php echo date('Y'); ?> Team Palm Tree LLC</span>
+                    <span>© <?php echo date('Y'); ?> <img src="/assets/shared/img/tptllclogo.png" /></span>
                 </div>
                 <div class="gdmradio-footer-buttons">
                     <a class="btn btn-default" href="http://tunein.gdmradio.com">

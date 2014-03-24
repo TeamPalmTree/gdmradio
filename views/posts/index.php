@@ -1,7 +1,7 @@
 <div class="container">
     <?php foreach ($posts as $post): ?>
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="media">
                 <a class="pull-left" href="#">
                     <img src="<?php echo '/assets/img/uploads/' . $post->image; ?>" width="128" height="128" />

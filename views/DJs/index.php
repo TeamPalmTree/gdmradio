@@ -1,7 +1,7 @@
 <div class="container">
     <?php foreach ($DJs as $DJ): ?>
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="media">
                 <a class="pull-left" href="#">
                     <img src="<?php echo '/assets/img/DJs/' . $DJ->username . '.png'; ?>" width="128" height="128" />

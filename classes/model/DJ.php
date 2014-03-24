@@ -6,10 +6,13 @@ class Model_DJ extends \Promoter\Model\Promoter_User
     public static function all()
     {
 
-        // first get the group id for DJs
-        $group = \Auth\Model\Auth_Group::query()->where('name', 'DJs')->get_one();
+        // first get the role id for DJs
+        $role = \Auth\Model\Auth_Role::query()->where('name', 'DJ')->get_one();
+        // verify we got one
+        if (is_null($role))
+            return array();
         // get DJs
-        $DJs = \Promoter\Model\Promoter_User::for_groups(array($group->id));
+        $DJs = \Promoter\Model\Promoter_User::for_roles(array($role->id));
         // for each DJ, set the shortname & description
         foreach ($DJs as $DJ)
         {

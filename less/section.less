@@ -1,98 +1,116 @@
-.gdmradio-section {
+.gdmradio-block {
   position: relative;
   background-color: hsla(hue(black), saturation(black), lightness(black), 0.6);
   width: 100%;
   margin-bottom: @gdmradio-spacing;
 }
 
-.gdmradio-section-content {
+.gdmradio-block-content {
   position: relative;
   width: 100%;
   padding: @gdmradio-spacing;
 }
 
-.gdmradio-section-facebook {
+.gdmradio-block-facebook {
   position: relative;
   width: 100%;
   padding-right: @gdmradio-spacing;
 }
 
-.gdmradio-section-twitter {
+.gdmradio-block-twitter {
   position: relative;
+  padding-left: @gdmradio-spacing;
+  padding-right: @gdmradio-spacing;
   width: 100%;
-  padding: 0px @gdmradio-spacing 0px @gdmradio-spacing;
 }
 
-.gdmradio-section-title-inline {
+.gdmradio-block-twitter iframe {
+  width: 100%;
+}
+
+.gdmradio-block-title-inline {
   position: absolute;
   top: 0px;
   right: @gdmradio-spacing;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: white;
 }
 
-.gdmradio-section-title {
+.gdmradio-block-title {
   position: relative;
   right: @gdmradio-spacing;
   text-align: right;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: white;
 }
 
-.gdmradio-section-buttons {
+.gdmradio-block-buttons {
   position: relative;
   right: @gdmradio-spacing;
   text-align: right;
 }
 
-.gdmradio-section-split {
+.gdmradio-block-split {
   width: 100%;
   margin-bottom: @gdmradio-spacing;
   position: relative;
   display: flex;
 }
 
-.gdmradio-section-split-left {
+.gdmradio-block-split-hide {
+  .gdmradio-block-split();
+}
+
+.gdmradio-block-split-left {
   position: relative;
   flex: 1;
   background-color: hsla(hue(black), saturation(black), lightness(black), 0.6);
   margin-right: @gdmradio-spacing / 2;
 }
 
-.gdmradio-section-split-right {
+.gdmradio-block-split-right {
   position: relative;
   flex: 1;
   background-color: hsla(hue(black), saturation(black), lightness(black), 0.6);
   margin-left: @gdmradio-spacing / 2;
 }
 
+@media all and (min-width: @screen-md-min) {
+
+  .gdmradio-block-split-hide {
+    display: none;
+  }
+
+}
+
 @media all and (max-width: @screen-sm-min) {
 
-  .gdmradio-section-split {
+  .gdmradio-block-split,
+  .gdmradio-block-split-hide {
     flex-flow: column;
     flex-direction: column;
   }
 
-  .gdmradio-section-title {
+  .gdmradio-block-title {
     text-align: left;
     left: @gdmradio-spacing / 2;
     right: 0px;
   }
 
-  .gdmradio-section-title-inline {
+  .gdmradio-block-title-inline {
     position: relative;
     right: 0px;
     left: @gdmradio-spacing / 2;
   }
 
-  .gdmradio-section-split-left {
+  .gdmradio-block-split-left {
     margin-right: 0px;
     margin-bottom: @gdmradio-spacing;
   }
 
-  .gdmradio-section-split-right {
+  .gdmradio-block-split-right {
     margin-left: 0px;
   }
 

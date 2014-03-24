@@ -1,0 +1,35 @@
+.gdmradio-navigation {
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+.gdmradio-navigation-player-left {
+  display: none !important;
+}
+
+.gdmradio-navigation-explore {
+  display: none !important;
+}
+
+@media all and (max-width: @screen-sm-min) {
+
+  .gdmradio-navigation-player-left {
+    display: inline-block !important;
+  }
+
+  .gdmradio-navigation-player-right {
+    display: none !important;
+  }
+
+  .gdmradio-navigation-explore {
+    display: inline-block !important;
+  }
+
+}
+
+@media all and (max-width: @screen-md-min) {
+
+  .gdmradio-navigation-player-text {
+    display: none;
+  }
+
+}

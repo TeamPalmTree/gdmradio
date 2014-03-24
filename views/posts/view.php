@@ -1,6 +1,6 @@
-<div id="post-view" class="container">
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-content">
+<div id="posts-view" class="container">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-content">
             <div class="media" data-bind="with: post">
                 <a class="pull-left" href="#">
                     <img src="" width="128" height="128" data-bind="attr: { src: '/assets/img/uploads/' + image() }" />
@@ -13,9 +13,9 @@
             </div>
         </div>
     </div>
-    <div class="gdmradio-section">
-        <div class="gdmradio-section-title<?php if (!$post_comment_access) echo '-inline'; ?>">COMMENTS</div>
-        <div class="gdmradio-section-content">
+    <div class="gdmradio-block">
+        <div class="gdmradio-block-title<?php if (!$post_comment_access) echo '-inline'; ?>">COMMENTS</div>
+        <div class="gdmradio-block-content">
             <?php if ($post_comment_access): ?>
             <div data-bind="with: post_comment">
                 <textarea id="post-form-comment" name="comment" class="form-control" data-bind="ckeditor: comment, ckeditorOptions: { height: '100px' }, validate: $root.errors"></textarea>

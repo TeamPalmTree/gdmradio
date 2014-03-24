@@ -5,10 +5,10 @@ class Controller_Shows extends Controller_GDMRadio
 
     public function before()
     {
-        // set section
-        $this->section = 'Shows';
         // run parent
         parent::before();
+        // set section
+        $this->section->name = 'Shows';
     }
 
 	public function action_index()

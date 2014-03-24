@@ -3,19 +3,30 @@
 class Controller_GDMRadio extends Controller_Standard
 {
 
-    public function router($method, $params)
+    public function before()
     {
 
-        // forward to router
-        parent::router($method, $params);
-        // gdmradio template setup
-        if (!$this->is_restful())
+        // run parent before
+        parent::before();
+
+        // standard data setup
+        $this->site->name = 'GDM Radio';
+        $this->site->description = 'United State of Dance, GDM Radio Broadcasts Electronic Dance Music Live from Atlanta 24/7/365';
+        $this->site->keywords = 'EDM,Gay,Atlanta,Radio,PLUR,Electronic,Dance,Music,United,State';
+        $this->site->image = 'http://www.gdmradio.com/assets/img/logo-facebook.png';
+        $this->site->url = 'http://www.gdmradio.com';
+        
+    }
+
+    public function after($response)
+    {
+
+        // perform template post processing
+        if (is_object($this->template))
         {
-            // site
-            $this->template->site = 'GDM Radio';
             // navigation
             $this->template->navigation = View::forge('gdmradio/navigation', array(
-                'section' => $this->section,
+                'section_name' => $this->section->name,
             ));
 
             // set login button view
@@ -27,6 +38,9 @@ class Controller_GDMRadio extends Controller_Standard
             $this->template->section->header = View::forge('gdmradio/header');
             $this->template->section->footer = View::forge('gdmradio/footer');
         }
+
+        // return standard
+        return parent::after($response);
 
     }
 
