@@ -3,6 +3,12 @@
         <div class="gdmradio-block-content">
             <div class="media">
                 <div class="media-body">
+                    <a class="gdmradio-media-title-link" href="https://itunes.apple.com/us/app/gdm-radio/id807302012?mt=8&uo=4">GDM Radio iOS App</a>
+                    <div class="gdmradio-media-text">Grab our free iOS app in the Apple App Store today.</div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
                     <a class="gdmradio-media-title-link" href="http://tunein.com/radio/GDM-Radio-s204929">TuneIn (Windows, iOS, Android)</a>
                     <div class="gdmradio-media-text">TuneIn is a great radio station aggregator with apps for the major smartphone operating systems.</div>
                 </div>

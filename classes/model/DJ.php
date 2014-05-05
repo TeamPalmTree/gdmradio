@@ -3,6 +3,9 @@
 class Model_DJ extends \Promoter\Model\Promoter_User
 {
 
+    public $shortname;
+    public $description;
+
     public static function all()
     {
 
@@ -12,7 +15,7 @@ class Model_DJ extends \Promoter\Model\Promoter_User
         if (is_null($role))
             return array();
         // get DJs
-        $DJs = \Promoter\Model\Promoter_User::for_roles(array($role->id));
+        $DJs = self::for_roles(array($role->id));
         // for each DJ, set the shortname & description
         foreach ($DJs as $DJ)
         {

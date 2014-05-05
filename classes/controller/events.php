@@ -8,7 +8,7 @@ class Controller_Events extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->section->name = 'Events';
+        $this->body->name = 'Events';
     }
 
     public function action_index()
@@ -27,6 +27,7 @@ class Controller_Events extends Controller_GDMRadio
 
         // set up facebook sdk
         $facebook = new Facebook($config);
+        $result = $facebook->api("/133040390196431?fields=access_token");
         $result = $facebook->api('/GDMRadio/events?fields=id,name,description,location,start_time,end_time,picture');
         $events = $result['data'];
         // fix up date times
@@ -36,8 +37,7 @@ class Controller_Events extends Controller_GDMRadio
         // set events
         $view->events = $events;
         // set template vars
-        $this->template->title = 'DJs';
-        $this->template->section->body = $view;
+        $this->template->body->content = $view;
 
     }
 

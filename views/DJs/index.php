@@ -4,7 +4,7 @@
         <div class="gdmradio-block-content">
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img src="<?php echo '/assets/img/DJs/' . $DJ->username . '.png'; ?>" width="128" height="128" />
+                    <img src="<?php echo '/assets/img/DJs/' . $DJ->shortname . '.jpg'; ?>" width="128" height="128" />
                 </a>
                 <div class="media-body">
                     <div class="gdmradio-media-title-big"><?php echo $DJ->shortname; ?></div>

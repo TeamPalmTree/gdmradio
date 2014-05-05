@@ -1,4 +1,4 @@
-<nav id="navigation" class="navbar navbar-default navbar-fixed-top" data-section_name="<?php echo $section_name; ?>">
+<nav id="navigation" class="navbar navbar-default navbar-fixed-top" data-section_name="<?php echo $section_name; ?>" data-model="GDMRadio_Navigation_Model">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="btn btn-default navbar-btn pull-right gdmradio-navigation-explore" data-toggle="collapse" data-target="#navigation-collapse">

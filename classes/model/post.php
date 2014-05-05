@@ -90,7 +90,7 @@ class Model_Post extends \Orm\Model
     {
         return Model_Post::query()
             ->order_by('posted_on', 'desc')
-            ->rows_limit(3)
+            ->rows_limit(6)
             ->get();
     }
 

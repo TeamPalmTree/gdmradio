@@ -8,7 +8,7 @@ class Controller_Shows extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->section->name = 'Shows';
+        $this->body->name = 'Shows';
     }
 
 	public function action_index()
@@ -17,7 +17,7 @@ class Controller_Shows extends Controller_GDMRadio
         $view = View::forge('shows/index');
         // set template vars
         $this->template->title = 'Shows';
-        $this->template->section->body = $view;
+        $this->template->body->content = $view;
 	}
 
 }

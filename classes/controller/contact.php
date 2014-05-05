@@ -8,7 +8,7 @@ class Controller_Contact extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->section->name = 'Contact';
+        $this->body->name = 'Contact';
     }
 
 	public function action_index()
@@ -17,7 +17,7 @@ class Controller_Contact extends Controller_GDMRadio
         $view = View::forge('contact/index');
         // set template vars
         $this->template->title = 'Contact';
-        $this->template->section->body = $view;
+        $this->template->body->content = $view;
 	}
 
 }

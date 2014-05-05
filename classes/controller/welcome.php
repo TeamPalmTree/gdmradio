@@ -8,7 +8,7 @@ class Controller_Welcome extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->section->name = 'Home';
+        $this->body->name = 'Home';
     }
 
 	public function action_index()
@@ -56,7 +56,7 @@ class Controller_Welcome extends Controller_GDMRadio
         $view->set('activities', $activities, false);
         $view->set('tweets', $tweets, false);
         // set template vars
-        $this->template->section->body = $view;
+        $this->template->body->content = $view;
 
 	}
 
@@ -65,7 +65,7 @@ class Controller_Welcome extends Controller_GDMRadio
         // create view
         $view = View::forge('welcome/form');
         // set template vars
-        $this->template->section->body = $view;
+        $this->template->body->content = $view;
     }
 
     public function post_edit()

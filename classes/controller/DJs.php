@@ -8,7 +8,7 @@ class Controller_DJs extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->section->name = 'DJs';
+        $this->body->name = 'DJs';
     }
 
 	public function action_index()
@@ -19,7 +19,7 @@ class Controller_DJs extends Controller_GDMRadio
         $view->DJs = Model_DJ::all();
         // set template vars
         $this->template->title = 'DJs';
-        $this->template->section->body = $view;
+        $this->template->body->content = $view;
 	}
 
 }

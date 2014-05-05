@@ -3,7 +3,7 @@
         <div class="gdmradio-block-content">
             <div class="gdmradio-jumbotron">
                 <div class="gdmradio-jumbotron-left">
-                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
                         <ol class="carousel-indicators">
                             <?php foreach ($carousels as $index => $carousel): ?>
                             <li data-target="#carousel" data-slide-to="<?php echo $index; ?>" class="<?php if ($index == 0) echo 'active'; ?>"></li>
@@ -60,11 +60,11 @@
             <div class="gdmradio-block-content">
                 <?php foreach ($posts as $post): ?>
                 <div class="media">
-                    <a class="pull-left" href="#">
+                    <a class="pull-left local" href="/posts/view/<?php echo $post->id; ?>">
                         <img src="<?php echo '/assets/img/uploads/' . $post->image; ?>" width="64" height="64" />
                     </a>
                     <div class="media-body">
-                        <a class="gdmradio-media-title-link-small" href="/posts/view/<?php echo $post->id; ?>"><?php echo $post->title; ?></a>
+                        <a class="gdmradio-media-title-link-small local" href="/posts/view/<?php echo $post->id; ?>"><?php echo $post->title; ?></a>
                         <div class="gdmradio-media-subtitle-small">by <?php echo $post->username ?> on <?php echo $post->user_posted_on ?></div>
                         <div class="gdmradio-media-text-small"><?php echo $post->summary; ?></div>
                     </div>
@@ -89,12 +89,12 @@
                 <?php foreach ($activities as &$activity): ?>
                 <div class="media">
                     <?php if (isset($activity['picture'])): ?>
-                    <a class="pull-left" href="https://www.facebook.com/<?php echo $activity['id']; ?>">
+                    <a class="pull-left" href="https://www.facebook.com/<?php echo $activity['id']; ?>" target="_blank">
                         <img src="<?php echo $activity['picture']; ?>" width="64" height="64" />
                     </a>
                     <?php endif; ?>
                     <div class="media-body">
-                        <a class="gdmradio-media-title-link-small" href="https://www.facebook.com/<?php echo $activity['from']['id']; ?>"><?php echo $activity['from']['name']; ?></a>
+                        <a class="gdmradio-media-title-link-small" href="https://www.facebook.com/<?php echo $activity['from']['id']; ?>" target="_blank"><?php echo $activity['from']['name']; ?></a>
                         <div class="gdmradio-media-subtitle-small"><?php echo $activity['user_created_time']; ?></div>
                         <div class="gdmradio-media-text-small"><?php if (isset($activity['message'])) { echo $activity['message']; } ?></div>
                     </div>
@@ -108,12 +108,12 @@
                 <?php foreach ($tweets as $tweet): ?>
                     <div class="media">
                         <?php if (isset($tweet->entities->media)): ?>
-                            <a class="pull-left" href="https://www.twitter.com/<?php echo $tweet->user->screen_name; ?>">
+                            <a class="pull-left" href="https://www.twitter.com/<?php echo $tweet->user->screen_name; ?>" target="_blank">
                                 <img src="<?php echo $tweet->entities->media[0]->media_url; ?>" width="64" height="64" />
                             </a>
                         <?php endif; ?>
                         <div class="media-body">
-                            <a class="gdmradio-media-title-link-small" href="https://www.twitter.com/<?php echo $tweet->user->screen_name; ?>"><?php echo $tweet->user->screen_name; ?></a>
+                            <a class="gdmradio-media-title-link-small" href="https://www.twitter.com/<?php echo $tweet->user->screen_name; ?>" target="_blank"><?php echo $tweet->user->screen_name; ?></a>
                             <div class="gdmradio-media-subtitle-small"><?php echo $tweet->created_at; ?></div>
                             <div class="gdmradio-media-text-small"><?php if (isset($tweet->text)) { echo $tweet->text; } ?></div>
                         </div>
