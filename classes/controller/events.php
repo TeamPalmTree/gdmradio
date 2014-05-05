@@ -8,7 +8,7 @@ class Controller_Events extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->body->name = 'Events';
+        $this->document->section_title = 'Events';
     }
 
     public function action_index()

@@ -8,7 +8,7 @@ class Controller_Posts extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->body->name = 'Posts';
+        $this->document->section_title = 'Posts';
     }
 
     public function action_index()
@@ -32,7 +32,6 @@ class Controller_Posts extends Controller_GDMRadio
         $view->page = $page;
         $view->set('posts', $posts, false);
         // set template vars
-        $this->template->title = 'News';
         $this->template->body->content = $view;
 
 	}
@@ -45,7 +44,6 @@ class Controller_Posts extends Controller_GDMRadio
         // set post comment access
         $view->post_comment_access = Auth::has_access('gdmradio.post_comment[create]');
         // set template vars
-        $this->template->title = 'Post';
         $this->template->body->content = $view;
 
     }
@@ -59,7 +57,6 @@ class Controller_Posts extends Controller_GDMRadio
         // create view
         $view = View::forge('posts/form');
         // set template vars
-        $this->template->title = 'Create Post';
         $this->template->body->content = $view;
 
     }
@@ -73,7 +70,6 @@ class Controller_Posts extends Controller_GDMRadio
         // create view
         $view = View::forge('posts/form');
         // set template vars
-        $this->template->title = 'Edit Post';
         $this->template->body->content = $view;
 
     }

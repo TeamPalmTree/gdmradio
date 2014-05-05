@@ -8,7 +8,7 @@ class Controller_Welcome extends Controller_GDMRadio
         // run parent
         parent::before();
         // set section
-        $this->body->name = 'Home';
+        $this->document->section_title = 'Home';
     }
 
 	public function action_index()
