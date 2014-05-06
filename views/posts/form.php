@@ -1,4 +1,4 @@
-<div id="posts-form" class="container">
+<div id="content" class="container" data-model="Posts_Form_Model">
     <div class="gdmradio-block">
         <div class="gdmradio-block-title" data-bind="if: post">
             <span data-bind="text: post().id() ? ('EDIT ' + post().title()) : ('CREATE ' + (post().title() ? post().title() : ''))"></span>

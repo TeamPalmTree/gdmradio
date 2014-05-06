@@ -1,4 +1,4 @@
-<div id="welcome-index" class="container">
+<div id="content" class="container" data-model="Welcome_Index_Model">
     <div class="gdmradio-block">
         <div class="gdmradio-block-content">
             <div class="gdmradio-jumbotron">

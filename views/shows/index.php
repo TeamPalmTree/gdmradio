@@ -1,4 +1,4 @@
-<div id="shows-index" class="container">
+<div id="content" class="container" data-model="Shows_Index_Model">
     <!-- ko if: single_shows().length > 0 -->
     <div class="gdmradio-block" data-bind="attr: { id: day() }">
         <div class="gdmradio-block-title-inline">SPECIAL SHOWS</div>

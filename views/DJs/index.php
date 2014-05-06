@@ -1,4 +1,4 @@
-<div class="container">
+<div id="content" class="container">
     <?php foreach ($DJs as $DJ): ?>
     <div class="gdmradio-block">
         <div class="gdmradio-block-content">

@@ -1,4 +1,4 @@
-<div id="welcome-form" class="container">
+<div id="content" class="container" data-model="Welcome_Form_Model">
     <div class="gdmradio-block">
         <div class="gdmradio-block-title">EDIT CAROUSELS</div>
         <div class="gdmradio-block-content">

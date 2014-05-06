@@ -1,4 +1,4 @@
-<div id="posts-view" class="container">
+<div id="content" class="container" data-model="Posts_View_Model">
     <div class="gdmradio-block">
         <div class="gdmradio-block-content">
             <div class="media" data-bind="with: post">
